@@ -21,8 +21,7 @@ function fibonacci(num) {function fibonacci(num) {
 }
 
 // Test cases
-console.log(fibonacci(1)); // Output: 0
-console.log(fibonacci(5)); // Output: 3
+
 
 }
 
