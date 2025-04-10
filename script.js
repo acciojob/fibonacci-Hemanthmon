@@ -1,28 +1,12 @@
-function fibonacci(num) {function fibonacci(num) {
-  // Handle base cases (0 and 1)
-  if (num <= 1) {
-    return num;
-  }
+function fibonacci(num) {
+    if (num === 1) return 0;
+    if (num === 2) return 1;
 
-  // Initialize variables for the two preceding numbers
-  let a = 0;
-  let b = 1;
-  let current;
-
-  // Loop for n-2 times (since the first two numbers are already defined)
-  for (let i = 2; i <= num; i++) {
-    current = a + b;
-    a = b;
-    b = current;
-  }
-
-  // Return the nth Fibonacci number
-  return current;
+    let a = 0, b = 1;
+    for (let i = 3; i <= num; i++) {
+        let temp = a + b;
+        a = b;
+        b = temp;
+    }
+    return b;
 }
-
-// Test cases
-
-
-}
-
-module.exports = fibonacci;
